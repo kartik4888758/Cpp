@@ -1,0 +1,232 @@
+program (35)
+theory (25)
+
+1-Function overlaoding and operator overlaoding (refer to CA-2).
+2-explanation of all basic datatypes.
+3-explain variables.
+4-basic structure of c++ program.
+5-taking input from the Users.
+6-explanation of all arithematic operators with example (program should include all defined operators ).
+7-explanation of FOR loop with an example(multiplication table).
+8#explain the detail concept of OOPs.
+9-concept of IF ELSE.
+10-For class and object refer to CA-2 papers.
+11-Constrcutors and its types(taught on 10/04/2023).
+12#inheritance :advantages and disadvantages alongwith an example.
+13#text and file.
+
+
+
+[1].
+ FUNCTION OVERLOADING is feature in programming languages which allows user to:
+create function with same name that differ in terms of datatypes or number of parameter.
+
+example:
+
+#include <iostream>
+using namespace std;
+
+int add(int a, int b)
+{
+    cout << "sum is :" << a + b << endl;
+}
+
+int add(int a, int b, int c)
+{
+    cout << "sum is :" << a + b + c<<endl;
+}
+
+double add(double a, double b)
+{
+    cout << "sum is:" << a + b<<endl;
+}
+double add(double a, double b, double c)
+{
+    cout << "sum is:" << a + b + c<<endl;
+}
+
+int main()
+{
+    add(10, 20);
+    add(10, 20, 30);
+    add(100.20, 10.20);
+    add(10.12, 20.20, 10.30);
+    return 0;
+}
+
+OPERATOR OVERLOADING
+the change in working of operators as per user defined types for class and object.
+
+example:
+
+#include <iostream>
+using namespace std;
+
+class Overload
+{
+public:
+    int value;
+    int value2;
+    int value3;
+    int value4;
+
+    Overload() : value(5)
+    {
+    }
+    void operator++()
+    {
+        // for prefix overloading
+        ++value;
+        cout << " Increament value is: " << value << endl;
+    }
+    void operator++(int)
+    {
+        // for postfix overloading
+        value2++;
+        cout << " Increament value is: " << value2 << endl;
+    }
+    void operator--()
+    {
+        // for prefix overloading
+        --value3;
+        cout << " Decreament value is: " << value3 << endl;
+    }
+    void operator--(int)
+    {
+        // for postfix overlaoding
+        value4--;
+        cout << " Decreament value is: " << value4 << endl;
+    }
+};
+
+int main()
+{
+    Overload abc;
+    ++abc;
+    ++abc;
+    --abc;
+    --abc;
+}
+
+[2].
+ Basic datatypes used in programming language are: 
+primary :integer,double,float,char,string,void
+user defined:class,structure,union
+derived:function,array,pointer
+
+[3].
+A dataype storage container that holds any value of variety of datatypes.
+
+example:
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a=10;
+    return 0;
+}
+
+here 'a' is variable of integer dataype that holds value 10.
+
+[4].Basic structure of c++ program
+ #include <iostream> - - - - - - - - - - - - [1]
+ using namespace std;  - - - - - - - - - - - [2]
+
+ int main()         - - - - - - - - - - - - -[3]
+ {
+    int a=10;
+    return 0; - - - - - - - - - - - - - - - -[4]
+ }                - - - - - - - - - - - - - -[5]
+
+
+
+ line 1,explains about iostream library which perform input and output operations.
+ line 2,std stands for standard, std namespace contains all built in classes and functions.
+ line 3, is the beginning of main function
+ line 4,tells about successful execution of program.
+ line 5,end of main function.
+
+[5]. //displaying user name by user input
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string abc;
+    cout<<"Enter your name: "<<endl;
+    cin>>abc;
+    cout<<"Your good name is: "<<abc;
+    return 0;
+}
+
+
+[6] Arithmetic operators are used to perform arithmetic operations
+   Operator	    Operation
+      +	        Addition
+      -	       Subtraction
+      *	       Multiplication
+      /	       Division
+      % 	   Modulo Operation (Remainder after division)
+
+      code using operators:
+
+      #include <iostream>
+      using namespace std;
+
+      int main()
+      {
+        int a,b;
+        cout<<"enter a number:";
+        cin>>a;
+        cout<<"enter another number:";
+        cin>>b;
+        cout<<"sum of numbers is: "<<a+b<<endl;
+        cout<<"difference of numbers is: "<<a-b<<endl;
+        cout<<"product of numbers is: "<<a*b<<endl;
+        cout<<"division value of both numbers is: "<<a/b<<endl;
+        cout<<"remainder after division is: "<<a%b<<endl;
+        return 0;
+        
+    }
+
+
+
+[7]. FOR loops are used to repeat a block of code for known number of times.
+example : multiplication table
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a,i;
+    cout<<"enter a number to generate table: ";
+    cin>>a;
+    for(i=1;i<=10;++i)
+    {
+        cout<<a<<"*"<<i<<"="<<a*i<<endl;
+
+    }
+    return 0;
+}
+
+
+[8]. OOPs stands for object oriented programming  systems.Object-Oriented Programming is a methodology
+ or paradigm to design a program using classes and objects.
+ A class is a blueprint for the object.
+ An object is an instance of a class.
+ An object has two characteristics: attributes and behavior.
+  For example, a car can be an object. And, it has
+
+attributes - brand, model, size, mileage, etc.
+behavior - driving, acceleration, parking, etc.
+example of inheritance to show :
+
+
+[9].
+
+
+
+
+
